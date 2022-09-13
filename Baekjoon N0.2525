@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	  	  Scanner sc = new Scanner(System.in);
+		  	
+	  	 int H,M1,M2;
+	  	  H = sc.nextInt();
+	  	  M1 = sc.nextInt();
+	  	  M2 = sc.nextInt(); 	  
+
+		      		  sc.close();
+		  int x = H*60 + M1 + M2;
+		  if(x>=1440) {
+			  System.out.println((x-1440)/60+" "+x%60);     
+		  }else {
+		  System.out.println(x/60+" "+x%60);    
+		  }
+		     
+	}
+}
