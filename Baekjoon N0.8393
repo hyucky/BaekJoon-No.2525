@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class study8 {
+
+	public static void main(String[] args) {
+	  	  Scanner sc = new Scanner(System.in);
+		  	
+	  	 int a,i;
+	  	  a = sc.nextInt();
+
+	  	 int sum = 0;
+
+		 for(i = 0; i<=a; i++) {
+			 sum += i;
+		 }
+		 System.out.println(sum);
+		 sc.close();
+	  }
+}
