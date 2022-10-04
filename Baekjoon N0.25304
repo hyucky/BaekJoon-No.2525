@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main1 {
+
+	public static void main(String[] args) {
+	  	  Scanner sc = new Scanner(System.in);
+		  	
+	  	 int a,b,c,d;
+	  	 a = sc.nextInt(); // 총 가격
+	  	  b = sc.nextInt(); // 종류
+	
+	  	 int sum=0;
+	  	 for(int i=1;i<=b;i++) {
+	  		c = sc.nextInt(); // 금액
+	  		d = sc.nextInt(); // 개수
+	  		sum += (c*d);
+	  	 }
+		if(sum == a) {
+			System.out.println("Yes");
+		}else {
+			System.out.println("No");
+		}
+
+		 }
+	}	 
+	  
