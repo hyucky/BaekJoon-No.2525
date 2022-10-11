@@ -1,0 +1,38 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.math.BigInteger;
+
+public class Main4 {
+
+	public static void main(String[] args) throws IOException {
+			
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+			
+			BigInteger a;
+			BigInteger b;
+			try {
+				a = new BigInteger(br.readLine());
+				b = new BigInteger(br.readLine());
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw e;
+			}
+			
+			BigInteger sum = a.add(b);
+			BigInteger min = a.subtract(b);
+			BigInteger mul = a.multiply(b);
+			
+			bw.write(sum.toString()+"\n");
+			bw.write(min.toString()+"\n");
+			bw.write(mul.toString()+"\n");
+			
+			bw.flush();
+			bw.close();
+			br.close();
+			
+	}
+}
