@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	  	  Scanner sc = new Scanner(System.in);
+		  	
+	  	 int a,b,c,d,e,f,g,h;
+	  	  a = sc.nextInt();
+	  	  b = sc.nextInt();
+	  	c = sc.nextInt();
+	  	d = sc.nextInt();
+	  	e = sc.nextInt();
+	  	f = sc.nextInt();
+	  	g = sc.nextInt();
+	  	h = sc.nextInt();
+	  	
+	  	int h1 = a+b;
+	  	int h2 = a+b-c+d;
+	  	int h3 = a+b-c+d-e+f;
+	  	int h4 = a+b-c+d-e+f-g+h;
+	  	if(h1 >= h2 && h1 >= Math.max(h3, h4)) {
+	  		System.out.println(h1);
+	  	} else if(h2 > h1 && h2 >= Math.max(h3, h4)) {
+	  		System.out.println(h2);
+	  	} else if(h3 >= h4 && h3 >= Math.max(h1, h2)) {
+	  		System.out.println(h3);
+	  	} else if(h4 >= h3 && h4 >= Math.max(h1, h2)) {
+	  		System.out.println(h4);
+	  	}
+	  	
+	  	 }
+	}
