@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+	  	  Scanner sc = new Scanner(System.in);
+		  	
+	  	 int a,b,c,d,e,f,g;
+	  	  a = sc.nextInt();
+	  	  b = sc.nextInt();
+	  	c = sc.nextInt();
+	  	d = sc.nextInt();
+	  	e = sc.nextInt();
+	  	f = sc.nextInt();
+	  	g = sc.nextInt();
+
+	  	int x = a * b;
+	  	 
+	  			System.out.print(c-x+ " ");
+				System.out.print(d-x+ " ");
+				System.out.print(e-x+ " ");
+				System.out.print(f-x+ " ");
+				System.out.print(g-x);
+	  	 }
+	}
