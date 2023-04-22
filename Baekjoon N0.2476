@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int N = Integer.parseInt(br.readLine());
+		
+		// 최대값을 저장해 줄 변수 선언
+		int count = 0;
+		
+		// 참가인원만큼 반복하는 for문 
+		for(int i=0 ; i < N ; i++) {
+			// 사람이 바뀔 때 마다 금액 초기화
+			int money = 0;
+			
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+			int c = Integer.parseInt(st.nextToken());
+			
+			// 나오는 주사위 눈에 따른 money 저장
+			if(a==b && a==c) {
+				money = 10000 + (b*1000);
+			} else if(a != b && b != c && a != c) {
+				money = Math.max(a, Math.max(b, c)) * 100;
+			} else {
+				if(a == b || a == c) {
+					money = 1000 + (a*100);
+				} else { // b랑 c만 같을 때
+					money = 1000 + (b*100);
+				}
+			}
+			// 최대값 저장
+			if(money > count) {
+				count = money;
+			}
+		}
+		
+		System.out.println(count);
+	}
+}
