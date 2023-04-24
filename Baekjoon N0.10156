@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+ 
+public class Main {
+ 
+    public static void main(String[] args) throws NumberFormatException, IOException  {
+        
+    	Scanner sc = new Scanner(System.in);
+    	// 과자 돈
+    	int x = sc.nextInt();
+    	// 살 개수
+    	int n =  sc.nextInt();
+    	// 가진 돈
+    	int m =  sc.nextInt();
+    	
+    	// 부모님께 받을 돈
+    	int g = 0;
+    	if(x*n > m) {
+    		g = x*n - m;
+    	} else {
+    		g = 0;
+    	}
+    	System.out.println(g);
+    	sc.close();
+    }
+}
